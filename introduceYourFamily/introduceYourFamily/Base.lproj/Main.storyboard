@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I9l-79-qVR">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="tN6-c2-6PV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I9l-79-qVR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BEj-Gw-QbF">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="u0v-x5-dmz" kind="relationship" relationship="rootViewController" id="gFQ-Pp-6gT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nFe-dC-SbP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-411" y="552"/>
+        </scene>
+        <!--My Family-->
+        <scene sceneID="1lf-2f-Xlb">
+            <objects>
+                <tableViewController title="My Family" id="u0v-x5-dmz" customClass="FamilyTableViewController" customModule="introduceYourFamily" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="L4z-TY-3XP">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FamilyCell" textLabel="1kl-MB-knm" detailTextLabel="OUZ-bK-ZcM" style="IBUITableViewCellStyleSubtitle" id="KQ5-qn-7Nx">
+                                <rect key="frame" x="0.0" y="55.333332061767578" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KQ5-qn-7Nx" id="byJ-sW-RaT">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1kl-MB-knm">
+                                            <rect key="frame" x="20" y="6.0000000000000009" width="25" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OUZ-bK-ZcM">
+                                            <rect key="frame" x="19.999999999999996" y="22.333333333333336" width="43.666666666666664" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="qFr-6w-lqu" kind="show" identifier="showDetail" id="g4P-j5-MLy"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="u0v-x5-dmz" id="tAU-er-7Z9"/>
+                            <outlet property="delegate" destination="u0v-x5-dmz" id="xqy-T9-tvp"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="0y7-8S-4J1">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="Oqz-bg-8ZV">
+                            <connections>
+                                <action selector="editButtonTapped:" destination="u0v-x5-dmz" id="DYM-60-hmb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YJu-of-h0S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="515" y="551"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="MTW-ln-5AE">
+            <objects>
+                <viewController id="qFr-6w-lqu" customClass="DetailViewController" customModule="introduceYourFamily" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zoW-rP-qWs">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="sOa-M9-nny">
+                                <rect key="frame" x="46" y="128" width="300" height="500"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0583" translatesAutoresizingMaskIntoConstraints="NO" id="DGO-4O-Nk6">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="cH3-eV-rpp"/>
+                                            <constraint firstAttribute="width" constant="300" id="kaD-PZ-fSO"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUn-fG-SSt">
+                                        <rect key="frame" x="1" y="350" width="298" height="150"/>
+                                        <string key="text">This is my beautiful wife, Kaylee. She has been such a blessing in my life, and she is truly incredible. She loves the outdoors, art, ToonTown, and being herself.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="QMH-B0-KRA"/>
+                                    <constraint firstAttribute="width" constant="300" id="fDJ-K3-jOM"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="RjX-kt-faO">
+                                <rect key="frame" x="46" y="131" width="300" height="500"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_6174" translatesAutoresizingMaskIntoConstraints="NO" id="lET-U3-LIK">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="8Ka-SN-NoB"/>
+                                            <constraint firstAttribute="width" constant="300" id="WyV-TW-YEm"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAe-qe-H9K">
+                                        <rect key="frame" x="3.6666666666666572" y="344" width="293" height="156"/>
+                                        <string key="text">This is my family. (From left to right) Carter, myself, my wife Kaylee, Tyler, Melanie, Brian, and Addy (dog). They've been such a blessing in my life, and I couldn't imagine my life without them.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="8dC-SR-D6w"/>
+                                    <constraint firstAttribute="width" constant="300" id="kSD-9k-Cjt"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LZn-FP-Lwl"/>
+                        <color key="backgroundColor" red="1" green="0.95701672541438831" blue="0.82972189667168805" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="LZn-FP-Lwl" firstAttribute="trailing" secondItem="RjX-kt-faO" secondAttribute="trailing" constant="47" id="0gC-31-NDi"/>
+                            <constraint firstItem="LZn-FP-Lwl" firstAttribute="trailing" secondItem="sOa-M9-nny" secondAttribute="trailing" constant="47" id="ADo-Dv-dg7"/>
+                            <constraint firstItem="sOa-M9-nny" firstAttribute="leading" secondItem="LZn-FP-Lwl" secondAttribute="leading" constant="46" id="GsN-eo-jJN"/>
+                            <constraint firstItem="LZn-FP-Lwl" firstAttribute="bottom" secondItem="sOa-M9-nny" secondAttribute="bottom" constant="190" id="Idu-RQ-TgS"/>
+                            <constraint firstItem="LZn-FP-Lwl" firstAttribute="bottom" secondItem="RjX-kt-faO" secondAttribute="bottom" constant="187" id="VNh-na-vy4"/>
+                            <constraint firstItem="RjX-kt-faO" firstAttribute="leading" secondItem="LZn-FP-Lwl" secondAttribute="leading" constant="46" id="WKi-Hq-LM0"/>
+                            <constraint firstItem="sOa-M9-nny" firstAttribute="top" secondItem="LZn-FP-Lwl" secondAttribute="top" constant="25" id="sp9-sC-5cK"/>
+                            <constraint firstItem="RjX-kt-faO" firstAttribute="top" secondItem="LZn-FP-Lwl" secondAttribute="top" constant="28" id="x5W-ND-hDM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="iev-ft-k3r"/>
+                    <connections>
+                        <outlet property="familyStackView" destination="RjX-kt-faO" id="Mek-aX-2r5"/>
+                        <outlet property="wifeStackView" destination="sOa-M9-nny" id="lgk-gW-MLU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TH2-CG-GU7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1366" y="551"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IMG_0583" width="6768" height="4512"/>
+        <image name="IMG_6174" width="3024" height="4032"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
