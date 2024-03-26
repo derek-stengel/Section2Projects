@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "portrait-of-happy-asian-friends-having-dinner-party-together-young-people-sitting-at-bar-table-toasting-beer-glasses-dinner-outdoor-people-food-drink-lifestyle-new-year-celebration-concept-photo.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
